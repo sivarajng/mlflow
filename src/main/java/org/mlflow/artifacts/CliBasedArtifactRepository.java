@@ -45,8 +45,10 @@ public class CliBasedArtifactRepository implements ArtifactRepository {
 
   // Name of the Python CLI utility which can be exec'd directly, with MLflow on
   // its path
-  private final String PYTHON_EXECUTABLE = Optional.ofNullable(System.getenv("MLFLOW_PYTHON_EXECUTABLE"))
-      .orElse("python");
+  // private final String PYTHON_EXECUTABLE =
+  // Optional.ofNullable(System.getenv("MLFLOW_PYTHON_EXECUTABLE"))
+  // .orElse("python");
+  private final String PYTHON_EXECUTABLE = "python3";
 
   // Python CLI command
   private final String PYTHON_COMMAND = "mlflow.store.artifact.cli";
